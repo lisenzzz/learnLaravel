@@ -21,7 +21,7 @@ class ProjectRepository
     }
 
     public function thumbnail($request){
-        if($request->hasFile('thumbnail')) {
+        if($request->hasFile('createThumbnail')) {
             $file = $request->createThumbnail;
             $name = str_random(10) . ".jpg";
             $path = public_path() . "/thumbnails/" . $name;
